@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Licorice&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: space-around;
+  background-size: 120rem;
+  background-attachment: fixed;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  height: 70px;
+  color: white;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.704);
+  border-radius: 1rem;
+  margin-top: 20px;
+  font-family: "Great Vibes", cursive;
+  
+}
+
+
+
+
+.logo .logo-first {
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+.logo .logo-last { 
+  color: goldenrod;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: goldenrod;
+}
+
+
+.section {
+  width: 30%;
+  display: none;
+  z-index: 99;
+
+  height: 600px;
+  background-color: rgba(43, 42, 42, 0.9);
+  border: grey 3px;
+  border-radius: 35px;
+  width: 600px;
+  position: absolute;
+  top: 0;
+  border: 10px solid rgb(252, 252, 252);
+  box-shadow: 20px 20px 35px rgba(136, 135, 135, 0.8);
+}
+
+.closeBtn {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 5% auto 0;
+}
+
+.closeBtn button,
+.add,
+.btnAdd {
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease;
+}
+
+.btnAdd {
+  width: 20%;
+  background-color: rgb(107, 230, 247);
+  height: 30px;
+}
+
+.add {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+  background-color: grey;
+}
+
+.closeBtn button:hover,
+.add:hover,
+.btnAdd:hover {
+  box-shadow: 0 0 10px 10px rgba(219, 221, 219, 0.5);
+  cursor: pointer;
+  color: goldenrod;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.parrent {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputContent {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 5% auto 0;
+  height: 500px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.inputContent input {
+  height: 50px;
+}
+.content {
+  max-width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer {
+  width: 70%;
+  display: flex;
+  color: white;
+  font-size: 20px;
+}
+
+.boxContent {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 450px;
+  margin: 20px;
+}
+
+.boxContent button {
+  background-color: #75bbf3; /* синій основний колір */
+  color: #ffffff; /* Білий текст */
+  border: none; /* Без рамки */
+  border-radius: 8px; /* Згладжені кути */
+  padding: 12px 24px; /* Внутрішні відступи */
+  font-size: 16px; /* Розмір шрифту */
+  font-weight: bold; /* Жирний шрифт */
+  cursor: pointer; /* Вказівник миші */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Тінь для глибини */
+  transition: all 0.3s ease; /* Плавний перехід */
+  width: 47%;
+}
+
+.boxContent button:hover {
+  background-color: #0674cb; /* Трохи темніший відтінок синього */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Більша тінь */
+  transform: translateY(-2px); /* Невеликий підйом кнопки */
+}
+
+.boxContent img {
+  min-height: 300px;
+  width: 200px;
+}
+.titleContent,
+.descriptionContent {
+  color: white;
+}
+
+.parentForDiv {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.navigaton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 45px;
+}
+
+.navigaton button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  margin: 0 auto;
+  color: white;
+  text-decoration: none;
+  font-family: "Licorice", cursive;
+  font-weight: 700;
+  border: none;
+  font-size: 2rem;
+  background-color: goldenrod;
+  width: 90px;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.navigaton button:hover { 
+  transform: scale(1);
+  background: black;
+  border: 2px solid goldenrod;
+  color: goldenrod;
+}

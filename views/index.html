@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalizeScroll.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="#home" class="logo">
+
+            <span class="logo-first">Luxure</span> <span class="logo-last"> Coffee</span></div>
+        </a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Про нас</a>
+            <a href="#content">Напої</a>
+            <a href="#contact">Контакти</a>
+            <a href="http://localhost:3000/login" class="login"><i class='bx bx-log-in'></i></a>
+        </nav>
+
+
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+
+            <h3>Вітаю вас в нашому закладі!</h3>
+            <a href="#home" class="logo">
+                <div> <span class="logo-first">Luxure</span> <span class="logo-last"> Coffee</span></div>
+            </a>
+            <p>Ми є Команда, яка спеціалізується на люкс-каві і інших напоях, а також мега-крутих смаколиках.
+                Ми радуємо наших клієнтів понад 5 років, і не збираємось зупинятись.
+                Хочеш отримати смаковий екстаз? Приходь - влаштуємо!:)</p>
+            <a href="#content">
+                <button class="order">Асортимент</button>
+            </a>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <section class="content_section">
+        <div class="video-background">
+            <video id="background-video" autoplay loop muted playsinline>
+                <source id="video-source" src="video/videoplayback.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="content" id="content">
+            <div class="logo"> <a href="#home" class="logo">
+
+                    <span class="logo-first">Luxure</span> <span class="logo-last"> Coffee</span>
+                </a></div>
+            <navbar class="navigaton">
+                <button class="all sort-button">All</button>
+                <button class="coffee sort-button">Coffee</button>
+                <button class="tea sort-button">Tea</button>
+                <button class="coctail sort-button">Coctail</button>
+                <button class="cakes sort-button">Cakes</button>
+
+            </navbar>
+        </div>
+    </section>
+
+
+    <section class="contact">
+        <div class="content-contact" id="contact">
+            <p>Як нас знайти:</p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et ultricies orci. Cras faucibus, ipsum
+                nec viverra placerat, urna metus gravida metus,
+                ac cursus erat justo ut nisi. Vestibulum id erat sed libero ullamcorper aliquet sit amet a dui. Integer
+                quis.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+        </div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3027.316924824517!2d30.437190035569248!3d50.354247569502355!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1721654877048!5m2!1sru!2sua"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Ми в соцмережах:</p>
+            <div class="social-icons">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/userInterface.js"></script>
+    <script src="js/buttons.js"></script>
+    <script src="js/backend.js"></script>
+    <script src="js/adminka.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,502 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Licorice&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Great+Vibes&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: space-around;
+  background-repeat: no-repeat;
+  background-size: 120rem;
+  background-attachment: fixed;
+  align-items: center;
+  background: black;
+}
+
+.header { 
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.logo { 
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: white;
+  text-decoration: none;
+}
+.logo .logo-first {
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+.logo .logo-last { 
+  color: goldenrod;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: goldenrod;
+}
+
+.logo:hover { 
+  transform: scale(1.1);
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+
+.navbar { 
+  width: 50%;
+  display: flex;
+}
+
+.navbar a { 
+  font-size: 1.8rem;
+  color: white;
+  margin-left: 2rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover, .navbar a.active {
+  color: goldenrod;
+  border-bottom: 3px solid gol;
+}
+
+
+#menu-icon { 
+  font-size: 3.6rem;
+  color: orangered;
+  display: none;
+}
+
+section { 
+  
+  min-height: 100vh;
+}
+
+.home {
+  width: 100%;
+display: flex;
+justify-content: right;
+text-align: left;
+align-items: center;
+background-size: cover;
+gap:8rem;
+background: url(../img/coffeCup.png) right no-repeat;
+
+
+
+}
+
+.home-content h3 { 
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 6rem;
+  max-height: 10rem;
+}
+
+.home-content div { 
+  display: flex;
+    justify-content: center;
+}
+
+.home-content p { 
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+  font-weight: 500;
+  max-width: 750px;
+  margin: 3rem 0;
+}
+
+.order { 
+  display: inline-block;
+padding: 1rem 2.8rem;
+background-color: goldenrod;
+border-radius: 4rem;
+font-size: 1.6rem;
+color: white;
+letter-spacing: 0.1rem;
+font-weight: 600;
+transition: 0.3s ease-in-out;
+cursor: pointer;
+}
+
+.order:hover { 
+
+ transform: scale(1);
+ background: black;
+ border: 2px solid goldenrod;
+ color: goldenrod;
+
+}
+
+
+
+
+
+.closeBtn {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 5% auto 0;
+}
+
+.closeBtn button,
+.add,
+.btnAdd {
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease;
+}
+
+.btnAdd {
+  width: 20%;
+  background-color: rgb(107, 230, 247);
+  height: 30px;
+}
+
+.add {
+  font-size: 1.8rem;
+  color: aqua;
+  font-weight: bold;
+}
+
+.closeBtn button:hover,
+.add:hover,
+.btnAdd:hover {
+  box-shadow: 0 0 10px 5px rgba(219, 221, 219, 0.5);
+}
+
+  .parrent {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputContent {
+  display: none;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 5% auto 0;
+  height: 500px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.inputContent input {
+  height: 50px;
+}
+.content {
+max-width: 70rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content .logo { 
+  margin: 0 auto;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  color: white;
+  font-size: 20px;
+  justify-content: center;
+  background-color: #52514e;
+  bottom: 0;
+  
+}
+
+
+
+.boxContent {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 550px;
+  margin: 20px;
+  border: solid 1px goldenrod;
+  border-radius: 1rem;
+}
+
+.boxContent .price { 
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.boxContent button {
+  background-color: #75bbf3; /* синій основний колір */
+  color: #ffffff; /* Білий текст */
+  border: none; /* Без рамки */
+  border-radius: 8px; /* Згладжені кути */
+  padding: 12px 24px; /* Внутрішні відступи */
+  font-size: 16px; /* Розмір шрифту */
+  font-weight: bold; /* Жирний шрифт */
+  cursor: pointer; /* Вказівник миші */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Тінь для глибини */
+  transition: all 0.3s ease; /* Плавний перехід */
+  width: 47%;
+}
+
+.boxContent button:hover {
+  background-color: #0674cb; /* Трохи темніший відтінок синього */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Більша тінь */
+  transform: translateY(-2px); /* Невеликий підйом кнопки */
+}
+
+.boxContent img {
+  min-height: 300px;
+  border-radius: 1rem;
+  width: 200px;
+}
+.titleContent { 
+  font-family: "Great Vibes", cursive;
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: #f3bb73;
+  margin-top: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.descriptionContent {
+  padding-top: 5px;
+  color: white;
+  font-family: "Bad Script";
+  font-size: 1.3rem;
+  max-height: 150px;
+  overflow-y: auto; 
+  line-height: 1.2;
+}
+
+.price { 
+  margin-top: 1rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.parentForDiv {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.navigaton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  height: 45px;
+}
+
+.navigaton button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  color: white;
+  text-decoration: none;
+  font-family: "Licorice", cursive;
+  font-weight: 700;
+  border: none;
+  font-size: 2rem;
+  border-radius: 10px;
+  border: 2px;
+  
+  width: 100px;
+  background-image: url('../img/wood.png');
+}
+
+
+
+
+.navigaton button:hover {
+  transform: translateY(-5px);
+  color: #ffd700; /* Змінює колір тексту при ховері */
+}
+
+.contact { 
+  background: url(../img/contact-img.png) center no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.content-contact { 
+
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(24, 24, 24, 0.3);
+  border-radius: 2rem;
+  padding: 5rem;
+  
+}
+
+.content-contact p {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 2rem;
+  color: white;
+
+}
+
+iframe { 
+  margin-top: 2rem;
+  border-radius: 5%;
+  padding: 2rem;
+}
+
+
+
+
+.footer {
+  background: rgb(0, 0, 0);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: goldenrod;
+}
+
+@media(max-width:970px) { 
+.header{
+  padding: 1rem;
+}
+
+  #menu-icon{
+    display: block;
+    margin-right: 2rem;
+  }
+
+  .navbar { 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 90%;
+    padding: 1rem 3%;
+    background:rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: space-around;
+    border-top: 3px solid goldenrod;
+
+  }
+ .active { 
+display: flex;
+}
+
+.navbar a{
+  display: block;
+  font-size: 2rem;
+  margin: 3rem 0;
+}
+
+.home-content {
+  text-align: center;
+}
+
+.home-content h3{
+  font-size: 2.5rem;
+  margin-top: 8rem;
+}
+
+
+.footer-content {
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.footer-content p {
+  font-size: 1.2rem;
+}
+
+.social-icons {
+  gap: 1rem;
+}
+
+.social-icons a {
+  font-size: 1.8rem;
+}
+
+
+}

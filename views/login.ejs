@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        .parrentForLogin{ 
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;   
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5rem;
+            width:500px;
+            height: 500px;
+            margin: 0 auto;
+            padding: 5%;
+        }
+
+        h1 { 
+            color: red;
+        }
+
+        .inputValidate { 
+            display: flex;
+            flex-direction: column;
+            width: 150px;
+            padding-bottom: 10%;
+        }
+
+        .inputValidate input { 
+            width: 10rem;
+            height: 2rem;
+        }
+        .inputValidate label { 
+            color: white;
+            font-size: 1.5rem;
+        }
+        .log { 
+            display: inline-block;
+            padding: 1rem 2.8rem;
+            background-color: goldenrod;
+            border-radius: 4rem;
+            font-size: 1.6rem;
+            color: white;
+            letter-spacing: 0.1rem;
+            font-weight: 600;
+            transition: 0.3s ease-in-out;
+            cursor: pointer; 
+        }
+
+        .log:hover { 
+            transform: scale(1);
+            background: black;
+            border: 2px solid goldenrod;
+             color: goldenrod; 
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="parrentForLogin">
+        <h1>Увага! Цей розділ сайту виключно для адміністрації!</h1>
+    <form action="/login" method="post">
+        <div class="inputValidate">
+            
+            <label  for="email">Email:</label>
+            <input type="text" name="email" id="email">
+        
+        
+            <label  for="password">Password:</label>
+            <input type="password" name="password" id="password">
+        </div>
+        <div>
+            <button type="submit" class="log">Login</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
