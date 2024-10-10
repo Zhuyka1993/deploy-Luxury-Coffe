@@ -17,7 +17,7 @@ const __dirname = path.dirname(__filename);
 
 // Створюємо екземпляр нашого сервера
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Налаштування EJS як шаблонізатора
 app.set("view engine", "ejs");
