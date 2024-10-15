@@ -87,6 +87,7 @@ body {
 .navbar { 
   width: 50%;
   display: flex;
+padding-right:5%;
 }
 
 .navbar a { 
