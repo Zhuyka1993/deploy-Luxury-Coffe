@@ -11,7 +11,7 @@ function sendDataToServer(title, description, type, price, image) {
   data.append("type", type);
   data.append("price", price);
 
-  fetch("http://localhost:3000/products", {
+  fetch("https://luxure-coffee-2113161d1421.herokuapp.com/products", {
     method: "POST",
     // headers: {
     //   "Content-Type": "application/json",
