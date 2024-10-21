@@ -4,7 +4,7 @@ window.onload = function () {
 
 function addContent() {
   // Завантаження даних з сервера
-  fetch("http://localhost:3000/products")
+  fetch("https://luxure-coffee-2113161d1421.herokuapp.com/products")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok"); //перевірка  на успішність відповіді
