@@ -162,7 +162,7 @@ function updateProductToServer(id, title, description, type, price, image) {
   data.append("type", type);
   data.append("price", price);
 
-  fetch(`http://localhost:3000/products/${id}`, {
+  fetch(`https://luxure-coffee-2113161d1421.herokuapp.com/products/${id}`, {
     method: "PATCH",
     body: data,
   })
