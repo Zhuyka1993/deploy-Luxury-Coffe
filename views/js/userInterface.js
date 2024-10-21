@@ -41,7 +41,7 @@ function addContent() {
         if (data[i].image) {
           const imgElement = document.createElement("img");
 
-          imgElement.src = "http://localhost:3000/" + data[i].image; // Встановлення src для зображення
+          imgElement.src = "https://luxure-coffee-2113161d1421.herokuapp.com/" + data[i].image; // Встановлення src для зображення
           imgElement.className = "imageContent"; // Встановлення класу
           newDiv.appendChild(imgElement); // Додавання зображення до newDiv
         }
