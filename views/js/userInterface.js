@@ -4,7 +4,7 @@ window.onload = function () {
 
 function addContent() {
   // Завантаження даних з сервера
-  fetch("http://localhost:3000/products")
+  fetch(`http://localhost:${PORT}/products`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok"); //перевірка  на успішність відповіді
