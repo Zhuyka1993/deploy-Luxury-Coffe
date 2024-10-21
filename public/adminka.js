@@ -30,7 +30,7 @@ function sendDataToServer(title, description, type, price, image) {
 }
 //function that dinamycly show new element after you add it
 function updateDinamic() {
-  fetch("http://localhost:3000/products")
+  fetch("https://luxure-coffee-2113161d1421.herokuapp.com/products")
     .then((response) => response.json())
     .then((data) => {
       const lastElement = data.length - 1;
@@ -59,7 +59,7 @@ function updateDinamic() {
         descriptionSpan.textContent = data[lastElement].description;
 
         const imgElement = document.createElement("img");
-        imgElement.src = "http://localhost:3000/" + data[lastElement].image; // Встановлення src для зображення
+        imgElement.src = "https://luxure-coffee-2113161d1421.herokuapp.com/" + data[lastElement].image; // Встановлення src для зображення
         imgElement.className = "imageContent"; // Встановлення класу
 
         const delBtn = document.createElement("button");
@@ -93,7 +93,7 @@ function updateDinamic() {
             // -----------------------------------------------
             xhr.open(
               "DELETE",
-              "http://localhost:3000/products/" +
+              "https://luxure-coffee-2113161d1421.herokuapp.com/products/" +
                 // ---------------- можливо замінити синтаксис _айді ( не міняю, оскільки оскільки в роутах айді стоїть products/:id)
                 data[i]._id
             );
