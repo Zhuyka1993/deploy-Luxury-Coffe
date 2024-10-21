@@ -11,7 +11,7 @@ function sendDataToServer(title, description, type, price, image) {
   data.append("type", type);
   data.append("price", price);
 
-  fetch("http://localhost:3000/products", {
+  fetch("https://luxure-coffee-2113161d1421.herokuapp.com/products", {
     method: "POST",
     // headers: {
     //   "Content-Type": "application/json",
@@ -30,7 +30,7 @@ function sendDataToServer(title, description, type, price, image) {
 }
 //function that dinamycly show new element after you add it
 function updateDinamic(data) {
-  // fetch("http://localhost:3000/products")
+  // fetch("https://luxure-coffee-2113161d1421.herokuapp.com/products")
   //   .then((response) => response.json())
   //   .then((data) => {
   //     const lastElement = data.length - 1;
@@ -59,7 +59,7 @@ function updateDinamic(data) {
     descriptionSpan.textContent = data[i].description;
 
     const imgElement = document.createElement("img");
-    imgElement.src = "http://localhost:3000/" + data[i].image; // Встановлення src для зображення
+    imgElement.src = "https://luxure-coffee-2113161d1421.herokuapp.com/" + data[i].image; // Встановлення src для зображення
     imgElement.className = "imageContent"; // Встановлення класу
 
     const delBtn = document.createElement("button");
