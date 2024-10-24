@@ -13,7 +13,7 @@ function sendDataToServer(title, description, type, price, image) {
   data.append("price", price);
 
 
-  fetch(`${port}/products`, {
+  fetch(`https://luxure-coffee-2113161d1421.herokuapp.com/products`, {
 
     method: "POST",
     // headers: {
