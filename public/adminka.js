@@ -1,8 +1,9 @@
+const  port  = "https://luxure-coffee-2113161d1421.herokuapp.com"
 function krestik() {
   let sec = document.querySelector(".section");
   sec.style = "display:none";
 }
-const port = process.env.PORT || 3000;
+
 
 function sendDataToServer(title, description, type, price, image) {
   const data = new FormData();

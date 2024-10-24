@@ -3,7 +3,7 @@ window.onload = function () {
 };
 
 
-const port = process.env.PORT || 3000;
+const port = "https://luxure-coffee-2113161d1421.herokuapp.com" || 3000;
 function addContent() {
   // Завантаження даних з сервера
 
