@@ -2,9 +2,11 @@ window.onload = function () {
   addContent();
 };
 
+const port = process.env.PORT || 3000;
+
 function addContent() {
   // Завантаження даних з сервера
-  fetch("http://localhost:3000/products")
+  fetch(`${port}/products`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok"); //перевірка  на успішність відповіді
@@ -40,7 +42,7 @@ function addContent() {
           // -----------------------------------------------
           xhr.open(
             "DELETE",
-            "http://localhost:3000/products/" +
+            `${port}/products/` +
               // ---------------- можливо замінити синтаксис _айді ( не міняю, оскільки оскільки в роутах айді стоїть products/:id)
               data[i]._id
           );
@@ -68,7 +70,7 @@ function addContent() {
         if (data[i].image) {
           const imgElement = document.createElement("img");
 
-          imgElement.src = "http://localhost:3000/" + data[i].image; // Встановлення src для зображення
+          imgElement.src = `${port}/` + data[i].image; // Встановлення src для зображення
           imgElement.className = "imageContent"; // Встановлення класу
           newDiv.appendChild(imgElement); // Додавання зображення до newDiv
         }

@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Налаштування EJS як шаблонізатора
 app.set("view engine", "ejs");
@@ -18,5 +18,5 @@ app.get("/", (req, res) => {
 
 // Запуск сервера
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running on :${port}`);
 });

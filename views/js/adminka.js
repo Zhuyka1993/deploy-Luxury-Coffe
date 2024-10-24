@@ -2,6 +2,7 @@ function krestik() {
   let sec = document.querySelector(".section");
   sec.style = "display:none";
 }
+const port = process.env.PORT || 3000;
 
 function sendDataToServer(title, description, type, price, image) {
   const data = new FormData();
@@ -11,7 +12,7 @@ function sendDataToServer(title, description, type, price, image) {
   data.append("type", type);
   data.append("price", price);
 
-  fetch("http://localhost:3000/products", {
+  fetch(`${port}/products`, {
     method: "POST",
     // headers: {
     //   "Content-Type": "application/json",
@@ -28,13 +29,9 @@ function sendDataToServer(title, description, type, price, image) {
       console.error("Помилка при відправці даних:", error);
     });
 }
-//function that dinamycly show new element after you add it
+//function that dinamyc show new element after you add it
 function updateDinamic(data) {
-  // fetch("http://localhost:3000/products")
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     const lastElement = data.length - 1;
-  // Проходження через отримані дані
+
 
   for (let i = 0; i < data.length; i++) {
     const type = document.querySelector('select[name="type"]');
@@ -59,7 +56,7 @@ function updateDinamic(data) {
     descriptionSpan.textContent = data[i].description;
 
     const imgElement = document.createElement("img");
-    imgElement.src = "http://localhost:3000/" + data[i].image; // Встановлення src для зображення
+    imgElement.src = `${port}/` + data[i].image; // Встановлення src для зображення
     imgElement.className = "imageContent"; // Встановлення класу
 
     const delBtn = document.createElement("button");
@@ -145,22 +142,9 @@ async function updateProductToServer(
   data.append("type", type);
   data.append("price", price);
 
-  // fetch(`http://localhost:3000/products/${id}`, {
-  //   method: "PATCH",
-  //   body: data,
-  // })
-  //   .then((response) => {
-  //     console.log(response.json());
-  //     return response.json();
-  //   })
-  //   .then((data) => {
-  //     resolve(data);
-  //   })
-  //   .catch((error) => {
-  //     reject(error);
-  //   });
 
-  let response = await fetch(`http://localhost:3000/products/${id}`, {
+
+  let response = await fetch(`${port}/products/${id}`, {
     method: "PATCH",
     body: data,
   });

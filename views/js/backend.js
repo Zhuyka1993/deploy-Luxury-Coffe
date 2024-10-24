@@ -5,7 +5,7 @@ const app = express();
 
 // Папка для зберігання завантажених зображень
 const uploadDirectory = path.join(__dirname, "uploads");
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Перевірка чи існує папка для зображень, якщо ні - створити
 const fs = require("fs");
@@ -52,5 +52,5 @@ app.use("/uploads", express.static("uploads"));
 
 // Прослуховування запитів на порту
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running on ${port}`);
 });

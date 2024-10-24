@@ -2,6 +2,7 @@ function krestik() {
   let sec = document.querySelector(".section");
   sec.style = "display:none";
 }
+const port = process.env.PORT || 3000;
 
 function sendDataToServer(title, description, type, price, image) {
   const data = new FormData();
@@ -11,7 +12,7 @@ function sendDataToServer(title, description, type, price, image) {
   data.append("type", type);
   data.append("price", price);
 
-  fetch("http://localhost:3000/products", {
+  fetch(`${port}/products`, {
     method: "POST",
     // headers: {
     //   "Content-Type": "application/json",
@@ -30,7 +31,7 @@ function sendDataToServer(title, description, type, price, image) {
 }
 //function that dinamycly show new element after you add it
 function updateDinamic() {
-  fetch("http://localhost:3000/products")
+  fetch(`${port}/products`)
     .then((response) => response.json())
     .then((data) => {
       const lastElement = data.length - 1;
@@ -59,7 +60,7 @@ function updateDinamic() {
         descriptionSpan.textContent = data[lastElement].description;
 
         const imgElement = document.createElement("img");
-        imgElement.src = "http://localhost:3000/" + data[lastElement].image; // Встановлення src для зображення
+        imgElement.src = `${port}/` + data[lastElement].image; // Встановлення src для зображення
         imgElement.className = "imageContent"; // Встановлення класу
 
         const delBtn = document.createElement("button");
@@ -93,7 +94,7 @@ function updateDinamic() {
             // -----------------------------------------------
             xhr.open(
               "DELETE",
-              "http://localhost:3000/products/" +
+              `${port}/products/` +
                 // ---------------- можливо замінити синтаксис _айді ( не міняю, оскільки оскільки в роутах айді стоїть products/:id)
                 data[i]._id
             );
@@ -162,7 +163,7 @@ function updateProductToServer(id, title, description, type, price, image) {
   data.append("type", type);
   data.append("price", price);
 
-  fetch(`http://localhost:3000/products/${id}`, {
+  fetch(`${port}/products/${id}`, {
     method: "PATCH",
     body: data,
   })
