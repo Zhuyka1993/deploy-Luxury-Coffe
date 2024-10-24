@@ -12,7 +12,9 @@ function sendDataToServer(title, description, type, price, image) {
   data.append("type", type);
   data.append("price", price);
 
+
   fetch(`${port}/products`, {
+
     method: "POST",
     // headers: {
     //   "Content-Type": "application/json",
@@ -31,6 +33,7 @@ function sendDataToServer(title, description, type, price, image) {
 }
 //function that dinamyc show new element after you add it
 function updateDinamic(data) {
+
 
 
   for (let i = 0; i < data.length; i++) {
@@ -57,6 +60,7 @@ function updateDinamic(data) {
 
     const imgElement = document.createElement("img");
     imgElement.src = `${port}/` + data[i].image; // Встановлення src для зображення
+
     imgElement.className = "imageContent"; // Встановлення класу
 
     const delBtn = document.createElement("button");

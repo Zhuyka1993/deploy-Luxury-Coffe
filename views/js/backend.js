@@ -2,7 +2,6 @@ const express = require("express");
 const multer = require("multer");
 const path = require("path");
 const app = express();
-
 // Папка для зберігання завантажених зображень
 const uploadDirectory = path.join(__dirname, "uploads");
 const port = process.env.PORT || 3000;

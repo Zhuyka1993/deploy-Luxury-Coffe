@@ -6,7 +6,9 @@ window.onload = function () {
 const port = process.env.PORT || 3000;
 function addContent() {
   // Завантаження даних з сервера
+
   fetch(`${port}/products`)
+
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok"); //перевірка  на успішність відповіді
@@ -43,7 +45,9 @@ function addContent() {
         if (data[i].image) {
           const imgElement = document.createElement("img");
 
+
           imgElement.src = `${port}/` + data[i].image; // Встановлення src для зображення
+
           imgElement.className = "imageContent"; // Встановлення класу
           newDiv.appendChild(imgElement); // Додавання зображення до newDiv
         }

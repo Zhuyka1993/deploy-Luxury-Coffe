@@ -12,7 +12,9 @@ function sendDataToServer(title, description, type, price, image) {
   data.append("type", type);
   data.append("price", price);
 
+
   fetch(`${port}/products`, {
+
     method: "POST",
     // headers: {
     //   "Content-Type": "application/json",
@@ -31,7 +33,9 @@ function sendDataToServer(title, description, type, price, image) {
 }
 //function that dinamycly show new element after you add it
 function updateDinamic() {
+
   fetch(`${port}/products`)
+
     .then((response) => response.json())
     .then((data) => {
       const lastElement = data.length - 1;
@@ -60,7 +64,9 @@ function updateDinamic() {
         descriptionSpan.textContent = data[lastElement].description;
 
         const imgElement = document.createElement("img");
+
         imgElement.src = `${port}/` + data[lastElement].image; // Встановлення src для зображення
+
         imgElement.className = "imageContent"; // Встановлення класу
 
         const delBtn = document.createElement("button");
@@ -95,6 +101,7 @@ function updateDinamic() {
             xhr.open(
               "DELETE",
               `${port}/products/` +
+
                 // ---------------- можливо замінити синтаксис _айді ( не міняю, оскільки оскільки в роутах айді стоїть products/:id)
                 data[i]._id
             );
@@ -163,7 +170,9 @@ function updateProductToServer(id, title, description, type, price, image) {
   data.append("type", type);
   data.append("price", price);
 
+
   fetch(`${port}/products/${id}`, {
+
     method: "PATCH",
     body: data,
   })
