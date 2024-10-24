@@ -4,7 +4,6 @@ const path = require("path");
 const app = express();
 // Папка для зберігання завантажених зображень
 const uploadDirectory = path.join(__dirname, "uploads");
-const port = process.env.PORT || 3000;
 
 // Перевірка чи існує папка для зображень, якщо ні - створити
 const fs = require("fs");
