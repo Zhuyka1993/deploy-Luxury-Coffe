@@ -471,6 +471,13 @@ display: flex;
   margin: 3rem 0;
 }
 
+.home { 
+  background-color: black;
+  background-image: none;
+  margin-top: 50px;
+  gap:0;
+}
+
 .home-content {
   text-align: center;
 }
