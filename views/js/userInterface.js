@@ -197,3 +197,15 @@ menuIcon.onclick = () => {
   menuIcon.classList.toggle('bx-x');
   navbar.classList.toggle('active');
 }
+
+
+const buttons = document.querySelectorAll('.sort-button');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Видаляємо клас 'active' з усіх кнопок
+            buttons.forEach(btn => btn.classList.remove('active'));
+            // Додаємо клас 'active' тільки на натиснуту кнопку
+            this.classList.add('active');
+        });
+    });

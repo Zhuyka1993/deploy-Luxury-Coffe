@@ -362,6 +362,9 @@ footer {
   background-image: url('../img/wood.png');
 }
 
+.navigaton button.active { 
+  color: goldenrod;
+}
 
 
 
@@ -475,6 +478,10 @@ display: flex;
   display: block;
   font-size: 2rem;
   margin: 3rem 0;
+}
+
+.boxContent { 
+  width: 270px;
 }
 
 .home { 
