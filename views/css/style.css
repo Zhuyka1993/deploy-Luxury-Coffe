@@ -270,6 +270,9 @@ footer {
   margin: 20px;
   border: solid 1px goldenrod;
   border-radius: 1rem;
+  align-items: center;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 .boxContent .price { 
@@ -301,7 +304,7 @@ footer {
 .boxContent img {
   min-height: 300px;
   border-radius: 1rem;
-  width: 200px;
+  width: 220px;
 }
 .titleContent { 
   font-family: "Great Vibes", cursive;
