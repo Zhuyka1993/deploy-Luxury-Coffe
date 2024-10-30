@@ -305,7 +305,7 @@ footer {
 .boxContent img {
   min-height: 300px;
   border-radius: 1rem;
-  width: 220px;
+  width: 200px;
 }
 .titleContent { 
   font-family: "Great Vibes", cursive;
@@ -486,6 +486,12 @@ display: flex;
 
 .boxContent { 
   width: 270px;
+}
+
+.boxContent img {
+  min-height: 300px;
+  border-radius: 1rem;
+  width: 230px;
 }
 
 .home { 
