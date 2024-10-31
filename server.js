@@ -11,13 +11,14 @@ import { Strategy as LocalStrategy } from "passport-local";
 import session from "express-session";
 import path from "path"; //
 import { fileURLToPath } from "url";
+import { port } from './config.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Створюємо екземпляр нашого сервера
 const app = express();
-const port = process.env.PORT || 3000;
+
 
 // Налаштування EJS як шаблонізатора
 app.set("view engine", "ejs");

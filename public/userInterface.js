@@ -2,7 +2,7 @@ window.onload = function () {
   addContent();
 };
 
-const port = "https://luxure-coffee-2113161d1421.herokuapp.com"
+const port = "https://poilka-production.up.railway.app/"
 
 function addContent() {
   // Завантаження даних з сервера
