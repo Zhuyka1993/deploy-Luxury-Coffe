@@ -71,14 +71,10 @@ function addContent() {
           const imgElement = document.createElement("img");
 
 
-          //imgElement.src = `${port}/` + data[i].image; // Встановлення src для зображення
+          imgElement.src = `${port}/` + data[i].image; // Встановлення src для зображення
           //imgElement.src = `${port}/${item.image}`; // Використання згенерованого імені
           //imgElement.src = `${port}/${data[i]._id}-${data[i].image}`; 
          // Витягнення частини назви файлу без ID
-  const imageName = data[i].image.replace(/^\d+-/, ''); // Видаляє все до першого '-'
-
-  imgElement.src = `${port}${imageName}`; // Формуємо правильний URL без ID
-console.log(imgElement.src);
 
           imgElement.className = "imageContent"; // Встановлення класу
           newDiv.appendChild(imgElement); // Додавання зображення до newDiv
