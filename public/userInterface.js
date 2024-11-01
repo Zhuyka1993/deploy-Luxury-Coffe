@@ -73,7 +73,11 @@ function addContent() {
 
           //imgElement.src = `${port}/` + data[i].image; // Встановлення src для зображення
           //imgElement.src = `${port}/${item.image}`; // Використання згенерованого імені
-          imgElement.src = `${port}/${data[i]._id}-${data[i].image}`; 
+          //imgElement.src = `${port}/${data[i]._id}-${data[i].image}`; 
+          const imageName = data[i].image.split('-').slice(1).join('-'); // Витягнення частини після '-'
+
+  imgElement.src = `${port}${imageName}`; // Формування URL без _id
+
 
           imgElement.className = "imageContent"; // Встановлення класу
           newDiv.appendChild(imgElement); // Додавання зображення до newDiv
