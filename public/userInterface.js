@@ -2,7 +2,7 @@ window.onload = function () {
   addContent();
 };
 
-const port = "https://luxury-coffee.up.railway.app/upload/"
+const port = "https://luxury-coffee.up.railway.app/upload"
 
 function addContent() {
   // Завантаження даних з сервера
@@ -71,10 +71,15 @@ function addContent() {
           const imgElement = document.createElement("img");
 
 
-          imgElement.src = `${port}/` + data[i].image; // Встановлення src для зображення
+          //imgElement.src = `${port}/` + data[i].image; // Встановлення src для зображення
           //imgElement.src = `${port}/${item.image}`; // Використання згенерованого імені
           //imgElement.src = `${port}/${data[i]._id}-${data[i].image}`; 
          // Витягнення частини назви файлу без ID
+          // Видалення перших 14 символів з назви файлу
+    const imageName = data[i].image.slice(14); // Витягуємо підрядок, починаючи з 15-го символу
+
+    // Формуємо шлях до зображення
+    imgElement.src = `${port}/${imageName}`; 
 
           imgElement.className = "imageContent"; // Встановлення класу
           newDiv.appendChild(imgElement); // Додавання зображення до newDiv
