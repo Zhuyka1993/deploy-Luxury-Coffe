@@ -71,13 +71,13 @@ function addContent() {
           const imgElement = document.createElement("img");
 
 
-          //imgElement.src = `${port}/` + data[i].image; // Встановлення src для зображення
+          imgElement.src = `${port}/` + data[i].image; // Встановлення src для зображення
           //imgElement.src = `${port}/${item.image}`; // Використання згенерованого імені
           //imgElement.src = `${port}/${data[i]._id}-${data[i].image}`; 
          // Витягнення частини назви файлу без ID
           // Видалення перших 14 символів з назви файлу
-    const imageName = data[i].image.slice(14); // Витягуємо підрядок, починаючи з 15-го символу
-
+    //const imageName = data[i].image.slice(14); // Витягуємо підрядок, починаючи з 15-го символу
+   // console.log(imgElement.src); 
     // Формуємо шлях до зображення
     imgElement.src = `${port}/${imageName}`; 
     console.log(imgElement.src); // Виводимо шлях в консоль

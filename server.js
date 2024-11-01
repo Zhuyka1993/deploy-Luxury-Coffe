@@ -40,7 +40,7 @@ const storage = multer.diskStorage({
     cb(null, "./upload");
   },
   filename: function (req, file, cb) {
-    cb(null, Date.now() + "-" + file.originalname);
+    cb(null,file.originalname);
   },
 });
 
@@ -137,7 +137,7 @@ app.delete("/products/:id", async (req, res) => {
 
 // PUT /products/:id - Обновлення продукту
 app.patch("/products/:id", upload.single("image"), async (req, res) => {
-  console.log(req.body);
+  
   const productId = req.params.id;
   const updatedProduct = {
     title: req.body.title,
