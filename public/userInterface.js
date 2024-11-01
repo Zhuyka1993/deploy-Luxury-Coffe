@@ -80,6 +80,7 @@ function addContent() {
 
     // Формуємо шлях до зображення
     imgElement.src = `${port}/${imageName}`; 
+    console.log(imgElement.src); // Виводимо шлях в консоль
 
           imgElement.className = "imageContent"; // Встановлення класу
           newDiv.appendChild(imgElement); // Додавання зображення до newDiv
