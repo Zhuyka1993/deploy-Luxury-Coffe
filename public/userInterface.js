@@ -78,7 +78,7 @@ function addContent() {
   const imageName = data[i].image.replace(/^\d+-/, ''); // Видаляє все до першого '-'
 
   imgElement.src = `${port}${imageName}`; // Формуємо правильний URL без ID
-
+console.log(imgElement.src);
 
           imgElement.className = "imageContent"; // Встановлення класу
           newDiv.appendChild(imgElement); // Додавання зображення до newDiv
