@@ -2,7 +2,7 @@ window.onload = function () {
   addContent();
 };
 
-const port = "https://luxury-coffee.up.railway.app/"
+const port = "https://luxury-coffee.up.railway.app"
 
 function addContent() {
   // Завантаження даних з сервера
