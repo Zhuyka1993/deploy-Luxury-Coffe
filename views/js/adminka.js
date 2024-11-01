@@ -13,7 +13,7 @@ function sendDataToServer(title, description, type, price, image) {
   data.append("price", price);
 
 
-  fetch(`https://poilka-production.up.railway.app/products`, {
+  fetch(`https://luxury-coffee.up.railway.app/products`, {
 
     method: "POST",
     // headers: {
