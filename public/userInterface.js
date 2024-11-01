@@ -71,7 +71,8 @@ function addContent() {
           const imgElement = document.createElement("img");
 
 
-          imgElement.src = `${port}/` + data[i].image; // Встановлення src для зображення
+          //   ТИМЧАСОВО ЗАМІНИВ imgElement.src = `${port}/` + data[i].image; // Встановлення src для зображення
+          imgElement.src = `${port}/${item.image}`; // Використання згенерованого імені
 
           imgElement.className = "imageContent"; // Встановлення класу
           newDiv.appendChild(imgElement); // Додавання зображення до newDiv
