@@ -119,6 +119,10 @@ section {
     padding: 0;
     overflow: hidden;
 }
+.content-section { 
+  display: flex;
+  justify-content: center;
+}
 
 .home {
   width: 100%;
