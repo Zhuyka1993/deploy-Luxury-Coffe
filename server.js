@@ -65,7 +65,7 @@ app.use(passport.session());
 // Локальна стратегія для passport
 passport.use(
   new LocalStrategy({ usernameField: "email" }, (email, password, done) => {
-    if (email === "admin@ukr.net" && password === "123456789") {
+    if (email === "admin@ukr.net" && password === "DiablO") {
       return done(null, { email: "admin@ukr.net" });
     } else {
       return done(null, false, { message: "Неправильний логін або пароль" });
