@@ -181,7 +181,7 @@ app.get("/login", (req, res) => {
 app.post(
   "/login",
   passport.authenticate("local", {
-    successRedirect: "/admin-panel",
+    successRedirect: "/admin-panel2",
     failureRedirect: "/login",
     failureFlash: false,
   })
