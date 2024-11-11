@@ -52,9 +52,10 @@ app.use("/upload", express.static("upload"));
 // Налаштування сесій
 app.use(
   session({
-    secret: "your_secret_key", // Змініть на секретний ключ
+    secret: "tratatazakota", 
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
+    cookie: { maxAge: 60000 }  
   })
 );
 
@@ -88,8 +89,16 @@ passport.deserializeUser((email, done) => {
   }
 });
 
+// Перевірка автентифікації
+function isAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) {  // Метод passport, що перевіряє, чи користувач автентифікований
+    return next();
+  }
+  res.status(401).json({ message: "Необхідно увійти в систему" });
+}
+
 // Роут для створення продуктів
-app.post("/products", upload.single("image"), async (req, res) => {
+app.post("/products", isAuthenticated, upload.single("image"), async (req, res) => {
   try {
     const imagePath = req.file ? req.file.path.replace(/\\/g, "/") : "";
     const newProduct = new Product({
@@ -181,14 +190,14 @@ app.get("/login", (req, res) => {
 app.post(
   "/login",
   passport.authenticate("local", {
-    successRedirect: "/admin-panel2",
+    successRedirect: "/admin",
     failureRedirect: "/login",
     failureFlash: false,
   })
 );
 
 // Роут для відображення панелі адміністратора, тільки для авторизованих користувачів
-app.get("/admin-panel", (req, res) => {
+app.get("/admin", (req, res) => {
   if (!req.isAuthenticated()) {
     return res.redirect("/login");
   }
